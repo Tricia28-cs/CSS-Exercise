@@ -1,0 +1,101 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5; /* light gray background */
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;      /* blue header bar */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;                      /* remove default margin */
+    font-size: 32px;
+}
+
+/* Main content wrapper */
+.content {
+    max-width: 900px;               /* limit width */
+    margin: 30px auto;              /* center horizontally */
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;                      /* space between biography & achievements */
+    align-items: flex-start;
+}
+
+/* Card-like sections */
+.biography,
+.achievements {
+    background-color: white;        /* white card on gray background */
+    padding: 20px;
+    border-radius: 12px;            /* smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+/* Let both sections share space */
+.biography {
+    flex: 1;
+}
+
+.achievements {
+    flex: 1;
+}
+
+/* Biography image */
+.biography img {
+    display: block;
+    margin: 0 auto 15px;            /* center image, add space below */
+    border-radius: 50%;             /* make it circular */
+    object-fit: cover;
+}
+
+/* Headings in sections */
+.biography h2,
+.achievements h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    border-bottom: 2px solid #eee;  /* underline */
+    padding-bottom: 5px;
+}
+
+/* Paragraph text */
+.biography p {
+    margin-top: 10px;
+}
+
+/* Achievements list */
+.achievements ul {
+    margin-top: 10px;
+    padding-left: 20px;             /* indent bullets */
+}
+
+.achievements li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+    .content {
+    flex-direction: column;       /* biography on top, achievements below */
+    }
+}
